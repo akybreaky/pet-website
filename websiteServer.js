@@ -14,6 +14,7 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/images', express.static(path.join(__dirname, 'pet-images')));
 
 // Set up EJS as the view engine
 app.set('views', path.join(__dirname, 'views'));
