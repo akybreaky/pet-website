@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Happy Tails Adoption Centre</title>
+        <link rel="stylesheet" href="styleQ8.css">
+        <script src="question-7-JS.js"></script>
+    </head>
+
+    <body>
+
+        <%include('header.ejs')%>
+        <nav class="side-menu">
+            <ul class="helvetica-bold">
+                <li><a class="active" href="/">HOME PAGE</a></li>
+                
+                <li><a href="/find-dog-cat">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a href="/have-a-pet-giveaway">HAVE A PET TO GIVE AWAY</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+                <% if (!session.loggedin) { %>
+                    <li><a href="/create-account">LOG IN</a></li>
+                <% } else { %>
+                    <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    
+        <main class="content-area">
+            <section id="Homepage">
+                <img class="img" src="dogandcat.jpg" alt="Pets picture cannot load" width="750">
+                <h2 class="helvetica-2"> Welcome to Happy Tails Adoption Centre!</h2>
+    
+                <p class="helvetica">
+                    <span class="bold"> Welcome to Happy Tails Adoption Center, </span> where every pet's journey to a loving home begins! At Happy Tails, we believe that every animal deserves a chance at a happy and fulfilling life. Our mission is to connect homeless pets with caring families and provide them with the love, care, and support they need during the transition. <br><br>
+                    Our center offers a <span class="bold">warm and friendly environment</span> where you can meet your new furry family member. We have a diverse selection of pets, each with their own unique personality and story, eagerly waiting for a forever home. From playful puppies and kittens to mature cats and dogs, our staff is dedicated to helping you find the perfect match for your household. <br><br>
+                    At Happy Tails, we <span class="bold">prioritize the health and well-being</span> of our animals. All of our pets are spayed or neutered, vaccinated, and receive regular veterinary check-ups. Our knowledgeable team provides ongoing support and resources to ensure a smooth adoption process and to help your new pet settle into their new home.<br><br>
+                    <span class="bold">Join us</span> in making a difference, one tail at a time. Visit Happy Tails Adoption Center and find your new best friend today! <br>
+                </p>
+    
+                <p class="helvetica-4"> 
+                    Credits: <a href="https://chat.openai.com">ChatGPT</a> for all the information found in the content area.
+                </p>
+    
+                <p class="helvetica-4">
+                    All pictures are credited to <a href="https://Google.com"> Google Images</a>.
+                </p> <br>
+            </section>
+        </main>
+        <%- include('footer.ejs') %>
+    </body>
+</html>

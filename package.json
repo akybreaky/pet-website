@@ -1,0 +1,27 @@
+{
+    "name": "adopt-a-pet",
+    "version": "1.0.0",
+    "description": "A website to help users adopt or give away dogs and cats.",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "body-parser": "^1.20.1",
+      "express": "^4.18.2",
+      "express-session": "^1.17.3",
+      "ejs": "^3.1.9"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    },
+    "keywords": [
+      "adoption",
+      "dogs",
+      "cats",
+      "pets"
+    ],
+    "author": "",
+    "license": "ISC"
+  }
+  

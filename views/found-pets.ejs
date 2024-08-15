@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FOUND PETS</title>
+        <link rel="stylesheet" href="styleQ8.css">
+        <script src="question-7-JS.js"></script>
+    </head>
+
+    <body>
+
+        <%include('header.ejs')%>
+        <nav class="side-menu">
+            <ul class="helvetica-bold">
+                <li><a href="/">HOME PAGE</a></li>
+                
+                <li><a href="/find-dog-cat">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a href="/have-a-pet-giveaway">HAVE A PET TO GIVE AWAY</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+                <% if (!session.loggedin) { %>
+                    <li><a href="/create-account">LOG IN</a></li>
+                <% } else { %>
+                    <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <section id="found-pets">
+                <h2>Matching Pets</h2>
+                <ul>
+                    <% pets.forEach(pet => { %>
+                        <li>
+                            <strong>Animal:</strong> <%= pet.animal %><br>
+                            <strong>Breed:</strong> <%= pet.breed %><br>
+                            <strong>Age:</strong> <%= pet.age %><br>
+                            <strong>Gender:</strong> <%= pet.gender %><br>
+                            <strong>Traits:</strong> <%= pet.traits %><br>
+                        </li>
+                    <% }); %>
+                </ul>
+                
+            </section>
+        </main>
+        <% include('footer.ejs') %>
+    </body>
+</html>    

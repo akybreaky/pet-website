@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAT CARE</title>
+        <link rel="stylesheet" href="styleQ8.css">
+        <script src="question-7-JS.js"></script>
+    </head>
+
+    <body>
+        <%include('header.ejs')%>
+        <nav class="side-menu">
+            <ul class="helvetica-bold">
+                <li><a href="/">HOME PAGE</a></li>
+                
+                <li><a href="/find-dog-cat">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a class="active" href="/cat-care">CAT CARE</a></li>
+                <li><a href="/have-a-pet-giveaway">HAVE A PET TO GIVE AWAY</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+                <% if (!session.loggedin) { %>
+                    <li><a href="/create-account">LOG IN</a></li>
+                <% } else { %>
+                    <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    
+        <main class="content-area">
+            <section id="Cat-care">
+                <img class="img" src="cat-picture.jpg" alt="Cat picture cannot load" width="495">
+                <h2 class="helvetica"> How to Take Care of Your Cat</h2>
+    
+                <p class="helvetica">
+                    Taking care of a cat is crucial for their well-being and happiness.
+                    Cats rely on their owners for basic needs such as food, water, shelter,
+                    and medical care. Proper care also includes providing mental
+                    stimulation through play, ensuring they have a clean and safe
+                    environment, and offering affection and companionship.
+                    A well-cared-for cat is more likely to be healthy, exhibit fewer
+                    behavioral issues, and form a strong, trusting bond with its owner.
+                    By attending to a cat's needs, owners contribute to the overall quality
+                    of life for their feline friend, fostering a loving and rewarding
+                    relationship.
+                </p>
+    
+                <div class="helvetica-3">
+                    <ol>
+                        <li> <span class="bold-color">Regular Vet Check-Ups:</span> 
+                            <ul>
+                                <li>
+                                    Schedule routine veterinary visits for vaccinations and overall health assessments.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Balanced Diet:</span>
+                            <ul>
+                                <li>
+                                    Feed your cat a nutritious diet appropriate for their age, health, and activity level.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Fresh Water:</span>
+                            <ul>
+                                <li>
+                                    Ensure your cat always has access to fresh, clean water.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Litter Box Maintenance:</span>
+                            <ul>
+                                <li>
+                                    Keep the litter box clean and place it in a quiet, easily accessible location.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Grooming:</span>
+                            <ul>
+                                <li>
+                                    Regularly brush your cat to reduce shedding and prevent matting.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Play and Exercise:</span>
+                            <ul>
+                                <li>
+                                    Provide toys and interactive playtime to keep your cat mentally and physically stimulated.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Scratching Posts:</span>
+                            <ul>
+                                <li>
+                                    Offer scratching posts or pads to help your cat maintain healthy claws and avoid furniture damage.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Safe Environment:</span>
+                            <ul>
+                                <li>
+                                    Make sure your home is safe, with no hazardous substances or items your cat could ingest or get hurt by.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Affection and Socialization:</span>
+                            <ul>
+                                <li>
+                                    Spend quality time with your cat to build a strong bond and ensure they feel loved and secure.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> <span class="bold-color">Monitor Behavior:</span>
+                            <ul>
+                                <li>
+                                    Pay attention to any changes in your cat's behavior or habits, as these can indicate health issues that may need veterinary attention.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+    
+    
+                <p class="helvetica-4"> 
+                    Credits: <a href="https://chat.openai.com">ChatGPT</a> for all the information found in the content area.
+                </p>
+    
+                <p class="helvetica-4">
+                    All pictures are credited to <a href="https://Google.com"> Google Images</a>.
+                </p> <br>
+            </section>
+        </main>
+    <%- include('footer.ejs') %>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.img{
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+header{
+    background-color: blanchedalmond;
+    margin-left: 200px;
+    height: 200px;
+}
+
+header h1{
+    margin: 0;
+}
+
+.helvetica{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400px;
+}
+
+.helvetica-bigger{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.helvetica-bold{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.helvetica-2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.helvetica-3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.helvetica-4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.bold-color{
+    font-weight: bold;
+    color:#d87a00
+}
+
+.side-menu{
+    background-color: #ffad42;
+    float: left;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    top:0;
+}
+
+.side-menu ul{
+    text-align: center;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    background-color: #ffad42;
+}
+
+.side-menu li a{
+    display:block;
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+.side-menu a.active{
+    background-color: rgb(201, 114, 0);
+    color: white;
+    display: block;
+}
+
+.side-menu a:hover:not(.active){
+    background-color: rgb(201, 114, 0);
+    color:white;
+}
+
+.content-area{
+    margin-left: 200px;
+    padding-bottom: 96px;
+}
+
+.content-area p{
+    margin-left: 10px;
+}
+
+.content-area h2{
+    font-size: 25px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+}
+body p{
+    text-align:left;
+}
+
+section{
+    background-color: #fff0e3;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    width: 100%;
+    background-color:blanchedalmond;
+    left: 200px;
+    width: calc(100% - 200px);
+    height: 100px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+.footer a:hover:not(.active) {
+    background-color: #ffad42;
+    color: rgb(201, 114, 0);
+}
+
+.fieldset-1{
+    margin: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}

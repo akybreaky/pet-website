@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HAVE A PET GIVEAWAY</title>
+        <link rel="stylesheet" href="styleQ8.css">
+        <script src="question-7-JS.js"></script>
+    </head>
+
+    <body>
+
+        <%include('header.ejs')%>
+        <nav class="side-menu">
+            <ul class="helvetica-bold">
+                <li><a href="/">HOME PAGE</a></li>
+                
+                <li><a href="/find-dog-cat">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a class="active" href="/have-a-pet-giveaway">HAVE A PET TO GIVE AWAY</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+                <% if (!session.loggedin) { %>
+                    <li><a href="/create-account">LOG IN</a></li>
+                <% } else { %>
+                    <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <section id="Have-a-pet-giveaway">
+              <br />
+              <h2 class="helvetica">Have a pet to give away?</h2>
+              <p class="helvetica-2">Please fill out the information sheet below.</p>
+              <form
+                id="giveaway-form"
+                action="have-pet-giveaway"
+                onsubmit="return validateForm()"
+              >
+                <fieldset class="fieldset-1">
+                  <legend>Give-away form</legend>
+                  Is it a dog or a cat?:
+                  <label>
+                    <input type="radio" name="animal" id="cat" value="Cat" />
+                    Cat
+                  </label>
+                  <label>
+                    <input type="radio" name="animal" id="dog" value="Dog" />
+                    Dog
+                  </label>
+                  <br /><br />
+                  What breed is your animal?:
+                  <select name="breed" id="breed">
+                    <option value="persian">Persian</option>
+                    <option value="Bulldog">Bulldog</option>
+                    <option value="sphynx">Sphynx</option>
+                    <option value="Poodle">Poodle</option>
+                    <option value="Abyssinian">Abyssinian</option>
+                    <option value="Pomeranian">Pomeranian</option>
+                    <option value="boxer">Boxer</option>
+                    <option value="Chartreux">Chartreux</option>
+                    <option value="beagle">Beagle</option>
+                    <option value="Bengal">Bengal</option>
+                    <option value="doberman">Doberman</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <br /><br />
+                  In which age range is your animal?:
+                  <select name="age" id="age">
+                    <option value="Kitten-Puppy">Kitten/Puppy: 0-1 year old</option>
+                    <option value="Young Adult">Young Adult: 1-3 years old</option>
+                    <option value="Adult">Adult: 3-7 years old</option>
+                    <option value="Senior Adult">Senior Adult: 8-15 years old</option>
+                  </select>
+                  <br /><br />
+                  What gender is your animal?:
+                  <label>
+                    <input type="radio" name="gender" id="female" value="Female" />
+                    Female
+                  </label>
+                  <label>
+                    <input type="radio" name="gender" id="male" value="Male" />
+                    Male
+                  </label>
+                  <br /><br />
+                  Which group of individuals does your animal get along with?
+                  <br />
+                  <label>
+                    <input type="checkbox" id="Smallchildren" name="Smallchildren" />
+                    Small Children
+                  </label>
+                  <label>
+                    <input type="checkbox" id="dogs" name="dogs" />
+                    Dogs
+                  </label>
+                  <label>
+                    <input type="checkbox" id="cats" name="cats" />
+                    Cats
+                  </label>
+                  <br /><br />
+                  <label for="comment">Additional comments:</label>
+                  <br />
+                  <input type="text" name="comment" id="comment" size="50" />
+                  <br /><br />
+                  <label for="fname">Full name:</label>
+                  <input type="text" id="fname" name="fname" />
+                  <br /><br />
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" />
+                </fieldset>
+                <p class="helvetica">Thank you for your time!</p>
+                <p>
+                  <input type="submit" value="Submit" /><input
+                    type="reset"
+                    value="Reset"
+                  />
+                </p>
+              </form>
+              <br /><br /><br /><br />
+            </section>
+        </main>
+    <%- include('footer.ejs') %>
+    </body>
+</html>

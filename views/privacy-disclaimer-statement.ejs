@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PRIVACY DISCLAIMER STATEMENT</title>
+        <link rel="stylesheet" href="styleQ8.css">
+        <script src="question-7-JS.js"></script>
+    </head>
+
+    <body>
+
+        <%include('header.ejs')%>
+        <nav class="side-menu">
+            <ul class="helvetica-bold">
+                <li><a href="/">HOME PAGE</a></li>
+                
+                <li><a href="/find-dog-cat">FIND A DOG/CAT</a></li>
+                <li><a href="/dog-care">DOG CARE</a></li>
+                <li><a href="/cat-care">CAT CARE</a></li>
+                <li><a href="/have-a-pet-giveaway">HAVE A PET TO GIVE AWAY</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+                <% if (!session.loggedin) { %>
+                    <li><a href="/create-account">LOG IN</a></li>
+                <% } else { %>
+                    <li><a href="/logout">LOG OUT</a></li>
+                <% } %>
+            </ul>
+        </nav>
+
+        <main class="content-area">
+            <section id="Homepage"><br>
+                <h2 class="helvetica"> Privacy/Disclaimer Policy</h2>
+    
+                <p class="helvetica-2">
+                    <span class="bold">At Happy Tails Adoption Center</span>, we prioritize the privacy and security of our adopters
+                    and supporters. All personal information collected, including names, addresses,
+                    contact details, and payment information, is used solely for the purpose of processing
+                    adoptions, donations, and communication. We do not share or sell personal information to
+                    third parties. Happy Tails Adoption Center makes every effort to ensure the accuracy of
+                    information provided about our pets. However, we cannot guarantee the complete accuracy of
+                    health, behavior, or breed information. Adopters are encouraged to seek professional
+                    veterinary advice and conduct their own research before finalizing an adoption. By
+                    engaging with Happy Tails, you acknowledge and accept these terms.
+                </p>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </section>
+        </main>
+    <%- include('footer.ejs') %>
+</body>
+</html>
